@@ -22,19 +22,19 @@ class ClimateViewController: BaseViewController, ClimateDisplayLogic {
     var router: (ClimateRoutingLogic & ClimateDataPassing)?
     
     // MARK: IBOutlet
-    @IBOutlet private var mainLayoutView: UIView!
-    @IBOutlet private var backgroundImage: UIImageView!
-    @IBOutlet private var headerView: UIView!
-    @IBOutlet private var currentLocationButton: UIButton!
-    @IBOutlet private var searchTextField: UITextField!
-    @IBOutlet private var forecastButton: UIButton!
-    @IBOutlet private var weatherImage: UIImageView!
-    @IBOutlet private var contentStackView: UIStackView!
-    @IBOutlet private var cityLabel: UILabel!
-    @IBOutlet private var degreeLabel: UILabel!
-    @IBOutlet private var humidityLabel: UILabel!
-    @IBOutlet private var minMaxDegreeLabel: UILabel!
-    @IBOutlet private var chagneDegreeButton: UIButton!
+    @IBOutlet weak private var mainLayoutView: UIView!
+    @IBOutlet weak private var backgroundImage: UIImageView!
+    @IBOutlet weak private var headerView: UIView!
+    @IBOutlet weak private var currentLocationButton: UIButton!
+    @IBOutlet weak private var searchTextField: UITextField!
+    @IBOutlet weak private var forecastButton: UIButton!
+    @IBOutlet weak private var weatherImage: UIImageView!
+    @IBOutlet weak private var contentStackView: UIStackView!
+    @IBOutlet weak private var cityLabel: UILabel!
+    @IBOutlet weak private var degreeLabel: UILabel!
+    @IBOutlet weak private var humidityLabel: UILabel!
+    @IBOutlet weak private var minMaxDegreeLabel: UILabel!
+    @IBOutlet weak private var chagneDegreeButton: UIButton!
     
     var isCelsius: Bool = unwrapped(UserDefaultService.getIsCelsius(), with: true)
     var weatherData: WeatherModel = WeatherModel(from: [:])

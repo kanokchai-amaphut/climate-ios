@@ -19,7 +19,7 @@ protocol ForecastDataStore {
 
 class ForecastInteractor: ForecastBusinessLogic, ForecastDataStore {
     var presenter: ForecastPresentationLogic?
-    var worker: WeatherWorkerLogic? = WeatherWorker()
+    var worker: ForecastWorkerLogic? = ForecastWorker()
     
     var lat: Double?
     var lon: Double?
@@ -32,12 +32,12 @@ class ForecastInteractor: ForecastBusinessLogic, ForecastDataStore {
         typealias Resposne = Forecast.FiveDaysWeather.Response
         let lat: String = String(request.lat)
         let lon: String = String(request.lon)
-        worker?.getForecastWeather(lat: lat, lon: lon, onSuccess: { data in
+        worker?.getForecastWeather(lat: lat, lon: lon, onSuccess: { [weak self] data in
             let response: Resposne = Resposne(result: .success(result: data))
-            self.presenter?.presenterGetForecastWeather(response: response)
-        }, onError: { error in
+            self?.presenter?.presenterGetForecastWeather(response: response)
+        }, onError: { [weak self] error in
             let response: Resposne = Resposne(result: .failure(error: error))
-            self.presenter?.presenterGetForecastWeather(response: response)
+            self?.presenter?.presenterGetForecastWeather(response: response)
         })
     }
     

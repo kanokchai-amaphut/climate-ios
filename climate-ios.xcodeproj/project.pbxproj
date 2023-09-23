@@ -13,7 +13,6 @@
 		B11383B02A9659490067A07A /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11383AF2A9659490067A07A /* APIRouter.swift */; };
 		B11383B32A9659D60067A07A /* Extension+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11383B22A9659D60067A07A /* Extension+URL.swift */; };
 		B11383B62A965BD40067A07A /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11383B52A965BD40067A07A /* WeatherModel.swift */; };
-		B11383B92A965FEB0067A07A /* WeatherWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11383B82A965FEB0067A07A /* WeatherWorker.swift */; };
 		B11383BC2A9667460067A07A /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11383BB2A9667460067A07A /* AppConfig.swift */; };
 		B11383BF2A9669D10067A07A /* DialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11383BE2A9669D10067A07A /* DialogView.swift */; };
 		B11CD5A12A95BEC500D08032 /* StoryboardScenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11CD59E2A95BEC500D08032 /* StoryboardScenes.swift */; };
@@ -89,7 +88,6 @@
 		B11383AF2A9659490067A07A /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		B11383B22A9659D60067A07A /* Extension+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+URL.swift"; sourceTree = "<group>"; };
 		B11383B52A965BD40067A07A /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
-		B11383B82A965FEB0067A07A /* WeatherWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherWorker.swift; sourceTree = "<group>"; };
 		B11383BB2A9667460067A07A /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		B11383BE2A9669D10067A07A /* DialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogView.swift; sourceTree = "<group>"; };
 		B11CD59E2A95BEC500D08032 /* StoryboardScenes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardScenes.swift; sourceTree = "<group>"; };
@@ -215,14 +213,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		B11383B72A965FCC0067A07A /* Worker */ = {
-			isa = PBXGroup;
-			children = (
-				B11383B82A965FEB0067A07A /* WeatherWorker.swift */,
-			);
-			path = Worker;
-			sourceTree = "<group>";
-		};
 		B11383BA2A9667360067A07A /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,7 +296,6 @@
 				B11383B42A965BB70067A07A /* Model */,
 				B11383A82A9657250067A07A /* Network */,
 				B175D9B62A95A6550084EE37 /* Tools */,
-				B11383B72A965FCC0067A07A /* Worker */,
 				B175D9E22A95A7040084EE37 /* Scene */,
 				B175D8AF2A9509EC0084EE37 /* ViewController.swift */,
 				B175D8B12A9509EC0084EE37 /* Main.storyboard */,
@@ -622,7 +611,6 @@
 				B175D9D82A95A6560084EE37 /* Generics.swift in Sources */,
 				B11CD5A32A95BEC500D08032 /* Assets.swift in Sources */,
 				B175D8AE2A9509EC0084EE37 /* SceneDelegate.swift in Sources */,
-				B11383B92A965FEB0067A07A /* WeatherWorker.swift in Sources */,
 				B11383BF2A9669D10067A07A /* DialogView.swift in Sources */,
 				B11383B32A9659D60067A07A /* Extension+URL.swift in Sources */,
 				B131ECBE2A95A901001A8B2A /* ForecastRouter.swift in Sources */,

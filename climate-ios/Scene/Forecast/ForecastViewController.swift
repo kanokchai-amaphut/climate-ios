@@ -21,8 +21,8 @@ class ForecastViewController: BaseViewController, ForecastDisplayLogic {
     
     // MARK: IBOutlet
     
-    @IBOutlet private var mainLayoutView: UIView!
-    @IBOutlet private var tableView: UITableView!
+    @IBOutlet weak private var mainLayoutView: UIView!
+    @IBOutlet weak private var tableView: UITableView!
     
     var forecastWeatherData: ForecastWeatherModel = ForecastWeatherModel(from: [:])
     var lat: Double = 0
