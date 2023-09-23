@@ -28,6 +28,10 @@ class ForecastPresenterSpy: ForecastPresentationLogic {
         }
     }
     
+    func presenterFilterForecastWeather(response: climate_ios.Forecast.FilterForecastWeatherData.Response) {
+        
+    }
+    
     func presenterGetDataStore(resposne: climate_ios.Forecast.GetDataStore.Response) {
         lat = resposne.lat
         lon = resposne.lon

@@ -8,7 +8,7 @@
 import Foundation
 @testable import climate_ios
 
-class ClimateWorkerSpy: WeatherWorkerLogic {
+class ClimateWorkerSpy: ClimateWorkerLogic {
     var isRetureSuccess: Bool = true
     var errorData: CustomError = .defaultTest
     var weatherModel: WeatherModel = WeatherModel(from: [:])

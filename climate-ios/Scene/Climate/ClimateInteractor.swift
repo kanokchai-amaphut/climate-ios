@@ -20,7 +20,7 @@ protocol ClimateDataStore {
 
 class ClimateInteractor: ClimateBusinessLogic, ClimateDataStore {
     var presenter: ClimatePresentationLogic?
-    var worker: WeatherWorkerLogic? = WeatherWorker()
+    var worker: ClimateWorkerLogic? = ClimateWorker()
     
     var lat: Double?
     var lon: Double?
@@ -30,23 +30,23 @@ class ClimateInteractor: ClimateBusinessLogic, ClimateDataStore {
         typealias Response = Climate.GetWeahterByCurrentLocation.Response
         let lat: String = String(request.lat)
         let lon: String = String(request.lon)
-        worker?.getCurrentWeather(lat: lat, lon: lon, onSuccess: { data in
+        worker?.getCurrentWeather(lat: lat, lon: lon, onSuccess: { [weak self] data in
             let response: Response = Response(result: .success(result: data))
-            self.presenter?.presenterGetCurrentWeather(response: response)
-        }, onError: { error in
+            self?.presenter?.presenterGetCurrentWeather(response: response)
+        }, onError: { [weak self] error in
             let response: Response = Response(result: .failure(error: error))
-            self.presenter?.presenterGetCurrentWeather(response: response)
+            self?.presenter?.presenterGetCurrentWeather(response: response)
         })
     }
     
     func getWeatherByCity(request: Climate.GetWeahterByCity.Request) {
         typealias Response = Climate.GetWeahterByCity.Response
-        worker?.getWeatherByCity(q: request.q, onSuccess: { data in
+        worker?.getWeatherByCity(q: request.q, onSuccess: { [weak self] data in
             let response: Response = Response(result: .success(result: data))
-            self.presenter?.presenterGetWeatherByCity(response: response)
-        }, onError: { error in
+            self?.presenter?.presenterGetWeatherByCity(response: response)
+        }, onError: { [weak self] error in
             let response: Response = Response(result: .failure(error: error))
-            self.presenter?.presenterGetWeatherByCity(response: response)
+            self?.presenter?.presenterGetWeatherByCity(response: response)
         })
     }
     
