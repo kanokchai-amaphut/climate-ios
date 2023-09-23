@@ -39,8 +39,8 @@ class ClimateViewController: BaseViewController, ClimateDisplayLogic {
     var isCelsius: Bool = unwrapped(UserDefaultService.getIsCelsius(), with: true)
     var weatherData: WeatherModel = WeatherModel(from: [:])
     let locationManager = CLLocationManager()
-    var lat: Double = 0
-    var lon: Double = 0
+    var lat: Double = 0.0
+    var lon: Double = 0.0
     
     // MARK: Object lifecycle
   
